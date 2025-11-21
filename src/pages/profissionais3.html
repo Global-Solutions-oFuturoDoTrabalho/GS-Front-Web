@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Agente de Sustentação Climática</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header class="header"><div class="container"><h1 class="logo">Agente de Sustentação Climática</h1>
+    <nav><ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profissionais.html">Profissões</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul></nav></div></header>
+
+  <main class="container conteudo">
+    <h2>Sobre o Agente de Sustentação Climática</h2>
+
+    <div id="slideshow" class="slideshow">
+      <div class="slide active">
+        <h3>Descrição</h3>
+        <p>Profissional voltado para ações que minimizem riscos climáticos e adaptem infraestruturas.</p>
+      </div>
+      <div class="slide">
+        <h3>Habilidades</h3>
+        <p>Planejamento urbano, análise de risco, políticas verdes e comunicação com comunidades.</p>
+      </div>
+      <div class="slide">
+        <h3>Atuação</h3>
+        <p>Setor público, planejamento urbano, empresas de infraestrutura e consultoria.</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="prevSlide('clima')">Anterior</button>
+      <button onclick="nextSlide('clima')">Próximo</button>
+    </div>
+
+    <p class="note">Recomendar | Enviar mensagem (botões fictícios)</p>
+  </main>
+
+  <footer class="footer"><div class="container"><p>FutureWork Hub © 2025</p></div></footer>
+  <script src="js/script.js"></script>
+  <script>initSlideshow('clima')</script>
+</body>
+</html>

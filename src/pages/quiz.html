@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Quiz - FutureWork Hub</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header class="header"><div class="container"><h1 class="logo">Quiz - FutureWork</h1>
+    <nav><ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profissionais.html">Profissões</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul></nav></div></header>
+
+  <main class="container conteudo">
+    <h2>Quiz: Você conhece o futuro do trabalho?</h2>
+    <div id="quiz">
+      <!-- Perguntas carregadas pelo JS -->
+    </div>
+
+    <button id="btnSubmit" class="bt" onclick="submitQuiz()">Enviar respostas</button>
+
+    <div id="resultado" style="margin-top:20px;"></div>
+  </main>
+
+  <footer class="footer"><div class="container"><p>FutureWork Hub © 2025</p></div></footer>
+
+  <script src="js/script.js"></script>
+  <script>loadQuiz()</script>
+</body>
+</html>
