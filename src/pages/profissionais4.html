@@ -1,48 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Designer de Experiências Imersivas</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <header class="header"><div class="container"><h1 class="logo">Designer de Experiências Imersivas</h1>
+  <header class="header"><div class="container">
+    <h1 class="logo">Designer de Experiências Imersivas</h1>
     <nav><ul class="menu">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="../../index.html">Home</a></li>
       <li><a href="profissionais.html">Profissões</a></li>
       <li><a href="quiz.html">Quiz</a></li>
       <li><a href="contato.html">Contato</a></li>
-    </ul></nav></div></header>
+    </ul></nav></div>
+  </header>
 
   <main class="container conteudo">
-    <h2>Sobre o Designer de Experiências Imersivas</h2>
+    <h2>Designer de Experiências Imersivas</h2>
 
-    <div id="slideshow" class="slideshow">
-      <div class="slide active">
-        <h3>Descrição</h3>
-        <p>Cria cenários virtuais e experiências em AR/VR para educação, entretenimento e trabalho.</p>
-      </div>
-      <div class="slide">
-        <h3>Habilidades</h3>
-        <p>Design de interação, modelagem 3D básica, roteiro e testes de usabilidade em VR.</p>
-      </div>
-      <div class="slide">
-        <h3>Atuação</h3>
-        <p>Agências criativas, empresas de treinamento, estúdios de jogos e educação imersiva.</p>
-      </div>
-    </div>
+    <div id="slideshow" class="slideshow"></div>
 
     <div class="controls">
       <button onclick="prevSlide('imersao')">Anterior</button>
       <button onclick="nextSlide('imersao')">Próximo</button>
     </div>
-
-    <p class="note">Recomendar | Enviar mensagem (botões fictícios)</p>
   </main>
 
   <footer class="footer"><div class="container"><p>FutureWork Hub © 2025</p></div></footer>
-  <script src="js/script.js"></script>
+
+  <script src="../../js/script.js"></script>
   <script>initSlideshow('imersao')</script>
 </body>
 </html>

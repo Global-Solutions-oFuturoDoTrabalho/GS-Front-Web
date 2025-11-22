@@ -1,48 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Programador de Gêmeos Digitais</title>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <header class="header"><div class="container"><h1 class="logo">Programador de Gêmeos Digitais</h1>
+  <header class="header"><div class="container">
+    <h1 class="logo">Programador de Gêmeos Digitais</h1>
     <nav><ul class="menu">
-      <li><a href="index.html">Home</a></li>
+      <li><a href="../../index.html">Home</a></li>
       <li><a href="profissionais.html">Profissões</a></li>
       <li><a href="quiz.html">Quiz</a></li>
       <li><a href="contato.html">Contato</a></li>
-    </ul></nav></div></header>
+    </ul></nav></div>
+  </header>
 
   <main class="container conteudo">
-    <h2>Sobre o Programador de Gêmeos Digitais</h2>
+    <h2>Programador de Gêmeos Digitais</h2>
 
-    <div id="slideshow" class="slideshow">
-      <div class="slide active">
-        <h3>Descrição</h3>
-        <p>Cria modelos digitais que simulam máquinas, processos ou pessoas para monitoramento e testes.</p>
-      </div>
-      <div class="slide">
-        <h3>Habilidades</h3>
-        <p>Modelagem, sensores virtuais, integração com IoT e análises preditivas.</p>
-      </div>
-      <div class="slide">
-        <h3>Atuação</h3>
-        <p>Indústria 4.0, manutenção preditiva, simulação de cenários.</p>
-      </div>
-    </div>
+    <div id="slideshow" class="slideshow"></div>
 
     <div class="controls">
-      <button onclick="prevSlide('gêmeo')">Anterior</button>
-      <button onclick="nextSlide('gêmeo')">Próximo</button>
+      <button onclick="prevSlide('gemeo')">Anterior</button>
+      <button onclick="nextSlide('gemeo')">Próximo</button>
     </div>
-
-    <p class="note">Recomendar | Enviar mensagem (botões fictícios)</p>
   </main>
 
   <footer class="footer"><div class="container"><p>FutureWork Hub © 2025</p></div></footer>
-  <script src="js/script.js"></script>
-  <script>initSlideshow('gêmeo')</script>
+
+  <script src="../../js/script.js"></script>
+  <script>initSlideshow('gemeo')</script>
 </body>
 </html>

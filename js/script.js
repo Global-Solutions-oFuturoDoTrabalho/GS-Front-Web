@@ -4,28 +4,27 @@ const slidesData = {
     {title:"Habilidades", text:"Ética aplicada, entendimento de modelos, comunicação e revisão de viés."},
     {title:"Atuação", text:"Revisão de políticas, auditoria de decisões automatizadas, treinamento de equipes."}
   ],
-  'gêmeo': [
+  gemeo: [
     {title:"Descrição", text:"Cria modelos digitais que simulam máquinas, processos ou pessoas para monitoramento e testes."},
     {title:"Habilidades", text:"Modelagem, sensores virtuais, integração com IoT e análises preditivas."},
     {title:"Atuação", text:"Indústria 4.0, manutenção preditiva, simulação de cenários."}
   ],
   clima: [
-    {title:"Descrição", text:"Profissional voltado para ações que minimizem riscos climáticos e adaptem infraestruturas."},
+    {title:"Descrição", text:"Profissional focado em reduzir riscos climáticos e adaptar infraestruturas."},
     {title:"Habilidades", text:"Planejamento urbano, análise de risco, políticas verdes e comunicação com comunidades."},
-    {title:"Atuação", text:"Setor público, planejamento urbano, empresas de infraestrutura e consultoria."}
+    {title:"Atuação", text:"Setor público, planejamento urbano, consultoria e infraestrutura."}
   ],
   imersao: [
     {title:"Descrição", text:"Cria cenários virtuais e experiências em AR/VR para educação, entretenimento e trabalho."},
-    {title:"Habilidades", text:"Design de interação, modelagem 3D básica, roteiro e testes de usabilidade em VR."},
-    {title:"Atuação", text:"Agências criativas, empresas de treinamento, estúdios de jogos e educação imersiva."}
+    {title:"Habilidades", text:"Design de interação, modelagem 3D básica, roteirização e testes de usabilidade."},
+    {title:"Atuação", text:"Agências, estúdios de jogos, empresas de treinamento e educação imersiva."}
   ],
   curador: [
-    {title:"Descrição", text:"Seleciona, organiza e interpreta dados com foco em contexto humano e usabilidade."},
-    {title:"Habilidades", text:"Visualização, storytelling com dados, ética e comunicação com times não técnicos."},
-    {title:"Atuação", text:"Times de produto, research, agências e consultorias que transformam dados em ações."}
+    {title:"Descrição", text:"Seleciona, organiza e interpreta dados com foco em contexto humano."},
+    {title:"Habilidades", text:"Visualização, storytelling, ética e comunicação com times não técnicos."},
+    {title:"Atuação", text:"Times de produto, research e consultorias que transformam dados em ações."}
   ]
 };
-
 const state = {};
 
 function initSlideshow(id){
@@ -38,7 +37,7 @@ function renderSlide(id){
   if(!slides) return;
   const container = document.querySelector('.slideshow');
   if(!container) return;
-  container.innerHTML = ''; // limpa
+  container.innerHTML = '';
   const slide = slides[state[id].index];
   const el = document.createElement('div');
   el.className = 'slide active';
@@ -49,22 +48,18 @@ function renderSlide(id){
 function nextSlide(id){
   if(!state[id]) return;
   const slides = slidesData[id];
-  state[id].index++;
-  if(state[id].index >= slides.length) state[id].index = 0;
+  state[id].index = (state[id].index + 1) % slides.length;
   renderSlide(id);
 }
-
 function prevSlide(id){
   if(!state[id]) return;
   const slides = slidesData[id];
-  state[id].index--;
-  if(state[id].index < 0) state[id].index = slides.length -1;
+  state[id].index = (state[id].index - 1 + slides.length) % slides.length;
   renderSlide(id);
 }
-
 const quizQuestions = [
   {
-    q:"Qual tecnologia está diretamente ligada à criação de conteúdo automático?",
+    q:"Qual tecnologia está ligada à criação de conteúdo automático?",
     options:["Blockchain","IA generativa","Robótica tradicional"],
     answer:1
   },
@@ -80,7 +75,7 @@ const quizQuestions = [
   },
   {
     q:"AR/VR são usados principalmente para:",
-    options:["Experiências imersivas","Coleta de impostos","Logística de caminhões"],
+    options:["Experiências imersivas","Coleta de impostos","Logística"],
     answer:0
   },
   {
@@ -119,3 +114,8 @@ function submitQuiz(){
   const resultado = document.getElementById('resultado');
   if(resultado) resultado.innerText = `Você acertou ${score} de ${quizQuestions.length} perguntas.`;
 }
+window.initSlideshow = initSlideshow;
+window.nextSlide = nextSlide;
+window.prevSlide = prevSlide;
+window.loadQuiz = loadQuiz;
+window.submitQuiz = submitQuiz;
