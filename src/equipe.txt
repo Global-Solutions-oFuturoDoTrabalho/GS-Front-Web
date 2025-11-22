@@ -2,3 +2,6 @@ Guilherme Segolin De Oliveira Mendes RM568179
 
 https://github.com/Global-Solutions-oFuturoDoTrabalho/GS-Front-Web.git
 
+https://vercel.com/guilherme-segolins-projects/gs-front_web
+
+Professores eu quis me testar e fazer esse projeto sozinho, em algumas partes pedi auxicilio de colegas e em outras usei a ajuda do chat.
